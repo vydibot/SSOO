@@ -70,14 +70,37 @@ button:hover {
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    flex-direction: column;
+}
+
+.address-info {
+    font-size: 10px;
+    color: #333;
+    margin-top: 5px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .memory-block.free {
     background-color: #a3e9a4;
 }
-
 .memory-block.occupied {
     background-color: #f4a261;
+}
+
+#dynamic-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#dynamic-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#dynamic-options input[type="checkbox"] {
+    width: auto;
 }
 
 .process-list {
