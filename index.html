@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Management Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Memory Management Simulator</h1>
+    <div class="container">
+        <div class="controls">
+            <h2>Controls</h2>
+            <div class="control-group">
+                <label for="algorithm">Algorithm:</label>
+                <select id="algorithm">
+                    <option value="static">Static</option>
+                    <option value="dynamic">Dynamic</option>
+                </select>
+            </div>
+            <div class="control-group" id="dynamic-options">
+                <label for="coalesce">Coalescing:</label>
+                <input type="checkbox" id="coalesce" checked>
+            </div>
+            <div class="control-group" id="static-options">
+                <p>Partitions: 1MiB, 2MiB, 4MiB, 8MiB, 1MiB</p>
+            </div>
+            <button id="reset-memory">Initialize/Reset Memory</button>
+        </div>
+
+        <div class="memory-container">
+            <h2>Memory (16 MiB)</h2>
+            <div id="memory-display" class="memory-display"></div>
+        </div>
+
+        <div class="process-container">
+            <h2>Process Queue</h2>
+            <div id="process-list"></div>
+            <div class="add-process">
+                <h3>Add New Process</h3>
+                <input type="number" id="process-size" placeholder="Size">
+                <select id="process-size-unit">
+                    <option value="1024">KiB</option>
+                    <option value="1">Bytes</option>
+                    <option value="1048576">MiB</option>
+                </select>
+                <button id="add-process">Add Process</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

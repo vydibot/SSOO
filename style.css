@@ -1,0 +1,122 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #1c1e21;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.controls, .memory-container, .process-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.control-group {
+    margin-bottom: 15px;
+}
+
+select, input[type="number"], button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #166fe5;
+}
+
+.memory-display {
+    border: 1px solid #ccc;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    background-color: #e9ebee;
+}
+
+.memory-block {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.memory-block.free {
+    background-color: #a3e9a4;
+}
+
+.memory-block.occupied {
+    background-color: #f4a261;
+}
+
+.process-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.process-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    background-color: #f7f7f7;
+}
+
+.process-item button {
+    width: auto;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.process-item .allocate {
+    background-color: #42b72a;
+}
+.process-item .allocate:hover {
+    background-color: #36a420;
+}
+
+.process-item .deallocate {
+    background-color: #fa3e3e;
+}
+.process-item .deallocate:hover {
+    background-color: #e03838;
+}
+
+#static-options p {
+    font-size: 14px;
+    color: #606770;
+}
